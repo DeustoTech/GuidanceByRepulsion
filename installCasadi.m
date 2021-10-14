@@ -1,4 +1,8 @@
 
+
+file        = 'OpenLoopControl_Guidance.m';
+pathfile    =  replace(which(file),file,''); 
+
 try
     casadi.SX.sym('s');
 catch
@@ -18,4 +22,7 @@ catch
 
 end
 
-end
+
+cd(pathfile)
+addpath(genpath(pathfile))
+
